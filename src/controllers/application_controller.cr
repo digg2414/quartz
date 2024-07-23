@@ -7,4 +7,8 @@ class ApplicationController < Amber::Controller::Base
   def current_user
     context.current_user
   end
+
+  def current_user
+    context.current_user
+  end
 end

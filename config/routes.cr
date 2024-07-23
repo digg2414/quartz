@@ -42,9 +42,19 @@ Amber::Server.configure do
     post "/session", SessionController, :create
     get "/signup", UserController, :new
     post "/registration", UserController, :create
+
+    get "/signin", SessionController, :new
+    post "/session", SessionController, :create
+    get "/signup", UserController, :new
+    post "/registration", UserController, :create
   end
 
   routes :auth do
+    get "/profile", UserController, :show
+    get "/profile/edit", UserController, :edit
+    patch "/profile", UserController, :update
+    get "/signout", SessionController, :delete
+
     get "/profile", UserController, :show
     get "/profile/edit", UserController, :edit
     patch "/profile", UserController, :update

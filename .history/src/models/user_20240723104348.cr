@@ -6,8 +6,7 @@ class User < Granite::Base
   table users
 
   column id : Int64, primary: true
-  column name : String?
-  column username : String?
+  collu
   column email : String?
   column hashed_password : String?
   timestamps
